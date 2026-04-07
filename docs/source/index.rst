@@ -1,8 +1,10 @@
-Welcome to Lumache's documentation!
+Welcome to the documentation of Team Data Analysis of the Netherlands Forensic Institute!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
+**Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of device.
+Key words are *interpretation*, *likelihood ratio* and *fun*.
+
+
 It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
 and offers a *simple* and *intuitive* API.
 
