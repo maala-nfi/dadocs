@@ -10,15 +10,3 @@ This will be the landing page for new and old developments made by the NFI, rega
     projects/data2activity
 
 
-.. _Tampering with the clock (iOS):
-
-Tampering with the clock (iOS)
-------------------------------
-
-Many different ways...
-
-Covered distances with healtdhb_secure.sqlite
----------------------------------------------
-
-Something about data2activity
-
