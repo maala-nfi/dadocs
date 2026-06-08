@@ -16,5 +16,5 @@ Contents
 
 .. toctree::
 
-   Research & Development
+   r_and_d
    api
