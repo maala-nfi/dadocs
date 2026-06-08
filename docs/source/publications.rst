@@ -1,7 +1,6 @@
-API
+Publications
 ===
 
 .. autosummary::
    :toctree: generated
 
-   lumache
