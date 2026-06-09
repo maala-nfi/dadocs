@@ -5,9 +5,9 @@ Welcome to the documentation of Team Data Analysis of the Netherlands Forensic I
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 
-Check out the :doc:`r_and_d` section for further information, including the latest :ref:`clock tampering discovery analysis <tampering-with-the-clock-ios>`:.
+Check out the :doc:`r_and_d` section for further information, including the latest :ref:`clock tampering discovery analysis <clocktampering>`:.
 
-Find earlier published work in the :doc:`publications` section.
+Find published work in the :doc:`publications` section.
 
 .. note::
 

@@ -1,4 +1,4 @@
-.. _Tampering with the clock (iOS):
+.. _clocktampering:
 
 Tampering with the clock (iOS)
 ==============================
