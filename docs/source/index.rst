@@ -1,5 +1,5 @@
 Welcome to the documentation of Team Data Analysis of the Netherlands Forensic Institute.
-===================================
+=========================================================================================
 
 **Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of digital device.
 Key words are *interpretation*, *likelihood ratio* and *fun*.

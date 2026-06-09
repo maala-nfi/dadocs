@@ -1,6 +1,6 @@
-.. Data 2 Activity:
+.. _Data2Activity:
 
-Data 2 Activity:
-----------------
+Data 2 Activity
+---------------
 
 super kewl stuff
