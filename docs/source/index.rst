@@ -1,15 +1,13 @@
-Welcome to the documentation of Team Data Analysis of the Netherlands Forensic Institute!
-===================================
+Welcome to the documentation of Team Data Analysis of the Netherlands Forensic Institute.
+=========================================================================================
 
-**Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of device.
+**Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of digital device.
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Check out the :doc:`r_and_d` section for further information, including the latest :ref:`clock tampering discovery analysis <clocktampering>`.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Find published work in the :doc:`publications` section.
 
 .. note::
 
@@ -19,6 +17,7 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
 
-   usage
-   api
+   r_and_d
+   publications
