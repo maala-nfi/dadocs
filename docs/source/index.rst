@@ -5,6 +5,15 @@ Welcome to the documentation of Team Data Analysis of the Netherlands Forensic I
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 
+.. card:: Tampering with the clock
+   :link: `clock tampering discovery analysis <clocktampering>`
+   :link-type: ref
+   Timestamps are of significant importance when analyzing a smartphone. Whilst they can make or break an alibi, or can place a device on a location on a certain time, they can be misleading when the clock has been tampered with. We propose to start every investigation with an analysis of the clock settings...
+
+.. card:: Data2Activity
+   :link: _Data2Activity
+   :link-type: ref
+   An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
 
 .. card:: What is Lorem Ipsum?
 
