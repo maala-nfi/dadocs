@@ -9,6 +9,6 @@ This will be the landing page for new and old developments made by the NFI, rega
 
     projects/clocktampering
     projects/data2activity
-    project/biome
+    projects/biome
 
 
