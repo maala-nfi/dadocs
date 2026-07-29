@@ -19,7 +19,19 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
 
    An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
 
+.. card:: 
+   :class-card: modern-card
+   :link: projects/data2activity
+   :link-type: doc
+
+    Data2Activity
+    ^^^
+    An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
+    +++
+    July 29, 2026
+
 .. card:: What is Lorem Ipsum?
+   :class-card: modern-card
 
     Definition
     ^^^
@@ -28,6 +40,7 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
     Footer
 
 .. card:: Where does it come from?
+   :class-card: modern-card
 
     Origin
     ^^^
