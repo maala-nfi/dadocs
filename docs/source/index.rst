@@ -6,13 +6,13 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 
 .. card:: Tampering with the clock
-   :link: clocktampering
+   :link: projects/clocktampering
    :link-type: doc
 
    Timestamps are of significant importance when analyzing a smartphone. Whilst they can make or break an alibi, or can place a device on a location on a certain time, they can be misleading when the clock has been tampered with. We propose to start every investigation with an analysis of the clock settings...
 
 .. card:: Data2Activity
-   :link: data2activity
+   :link: projects/data2activity
    :link-type: doc
 
    An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
