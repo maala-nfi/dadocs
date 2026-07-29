@@ -45,6 +45,12 @@
     background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
 
+.modern-card .sd-card-footer {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
 /* make the content wider */
 .wy-nav-content {
     max-width: 80%;

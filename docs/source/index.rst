@@ -26,7 +26,7 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
    
    Data2Activity
    ^^^
-   An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
+    An iOS device keeps track of the number of steps taken, the distance covered and the floors ascended. Did you know this data is used for police cases? Read on...
    +++
    July 29, 2026
     
