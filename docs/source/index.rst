@@ -12,6 +12,7 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
    Timestamps are of significant importance when analyzing a smartphone. Whilst they can make or break an alibi, or can place a device on a location on a certain time, they can be misleading when the clock has been tampered with. We propose to start every investigation with an analysis of the clock settings...
 
 .. card:: Data2Activity
+   :class-card: modern-card
    :link: projects/data2activity
    :link-type: doc
 
