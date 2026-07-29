@@ -6,6 +6,7 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 
 .. card:: Tampering with the clock
+   :class-card: modern-card
    :link: projects/clocktampering
    :link-type: doc
 
