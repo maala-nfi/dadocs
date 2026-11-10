@@ -1,9 +1,20 @@
-Welcome to the documentation of Team Data Analysis of the Netherlands Forensic Institute.
+Latest blogs by Team Data Analysis of the Netherlands Forensic Institute.
 =========================================================================================
 
 **Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of digital device.
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
+
+.. card::
+   :class-card: modern-card
+   :link: projects/favicon
+   :link-type: doc
+
+   Op Favicon Safari
+   ^^^
+    Hoe favicons inzicht kunnen geven in browse geschiedenis, zelfs als de geschiedenis gewist is! Lees verder..
+   +++
+   November 10, 2026
 
 .. card::
    :class-card: modern-card
