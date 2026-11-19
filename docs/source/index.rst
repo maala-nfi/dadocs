@@ -4,6 +4,16 @@ Latest blogs by Team Data Analysis of the Netherlands Forensic Institute.
 **Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of digital device.
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
+.. card::
+   :class-card: modern-card
+   :link: projects/iostimesync
+   :link-type: doc
+
+   IOS automatic timezone - Where to Look?
+   ^^^
+    In forensics context, knowing whether an iPhone was automatically syncing its clock can save a lot of time. In this post you can read where to look and how to interpret the settings.
+   +++
+   November 19, 2026
 
 .. card::
    :class-card: modern-card
