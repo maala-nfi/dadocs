@@ -7,6 +7,17 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 .. card::
    :class-card: modern-card
+   :link: projects/corestoragetransactions
+   :link-type: doc
+
+   Timelining transactions within Core Storage using the ATRANSACTIONS table 
+   ^^^
+    The Core Storage database photos.sqlite contains a ATRANSACTIONS table that allows to determine the moment users interact with multimedia even after it has been removed...
+   +++
+   November 19, 2026
+
+.. card::
+   :class-card: modern-card
    :link: projects/favicons
    :link-type: doc
 
