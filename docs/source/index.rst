@@ -7,6 +7,17 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
 
 .. card::
    :class-card: modern-card
+   :link: projects/favicons
+   :link-type: doc
+
+   Op Favicon Safari
+   ^^^
+    Hoe favicons inzicht kunnen geven in browse geschiedenis, zelfs als de geschiedenis gewist is! Lees verder..
+   +++
+   November 19, 2026
+
+.. card::
+   :class-card: modern-card
    :link: projects/clocktampering
    :link-type: doc
 
