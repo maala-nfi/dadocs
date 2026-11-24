@@ -11,9 +11,8 @@ association between a media file and the app.
 On Apple devices, the file `/private/var/mobile/Media/PhotoData/Photos.sqlite` can be useful here. This is the database
 of the Photos app, containing the metadata for the photos and videos (from, among other places, the DCIM folder).
 Among other things, the database records which app added the media file to the database, when the media file was added
-and much more. Example queries for the Photos.sqlite database can be found at:
-
-.. _iOS Local PL Photos.sqlite Queries: https://github.com/ScottKjr3347/iOS_Local_PL_Photos.sqlite_Queries.
+and much more. Example queries for the Photos.sqlite database can be found at
+`iOS Local PL Photos.sqlite Queries <https://github.com/ScottKjr3347/iOS_Local_PL_Photos.sqlite_Queries>`__.
 
 The Photos.sqlite database can therefore be used to determine which app a media file came from, but it does not tell
 you whether the file itself was created, sent, received or only viewed. During one investigation, however, we noticed
