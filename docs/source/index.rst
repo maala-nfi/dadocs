@@ -20,9 +20,9 @@ Key words are *interpretation*, *likelihood ratio* and *fun*.
    :link: projects/favicons
    :link-type: doc
 
-   Op Favicon Safari
+   On Favicon Safari
    ^^^
-    Hoe favicons inzicht kunnen geven in browse geschiedenis, zelfs als de geschiedenis gewist is! Lees verder..
+    Even when the browser history is cleared, favicons can still give useful information of browser activity! Read on..
    +++
    November 19, 2026
 

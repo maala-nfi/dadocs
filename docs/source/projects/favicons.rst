@@ -1,7 +1,9 @@
 .. _favicons:
 
-A Favicon Safari
+Going on a Favicon Safari
 ==============================
+
+.. image:: ../images/favicon_safari.png
 
 During an investigation, the main question for us was to establish the timeframe of certain internet search queries. The queries were done using the Safari browser on an iPhone. Internet history is still a valuable source for identifying user activity. Unfortunately however, the internet history oftentimes gets deleted by a user, or is deleted automatically after a certain amount of time. In our investigation the history was not present anymore. Luckily, there are other Safari databases recording data a user cannot easily delete. Such a database is the ``Favicon.db`` database.
 
@@ -9,7 +11,7 @@ Favicons are the small icons you can see on the tab of the browser. Safari saves
 
 .. image:: ../images/favicon1.png
 
-Inside the database we can see the table `page_url`, which contains URLs and UUIDs. Another table is called `icon_info`, containing both ULRs and UUIDs... and timestamps! However, the URLs in these two tables do not match. The URLs in table `icon_info` refer to the download locations of the favicons. The URLs in table `page_url` are visited by the user. We can find a link between these URLs by comparing their UUIDs.
+Inside the database we can see the table ``page_url``, which contains URLs and UUIDs. Another table is called ``icon_info``, containing both ULRs and UUIDs... and timestamps! However, the URLs in these two tables do not match. The URLs in table `icon_info` refer to the download locations of the favicons. The URLs in table `page_url` are visited by the user. We can find a link between these URLs by comparing their UUIDs.
 
 However, not all records in table `page_url` can be related to the time of visiting a URL.
 
