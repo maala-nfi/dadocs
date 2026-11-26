@@ -4,6 +4,7 @@ Going on a Favicon Safari
 ==============================
 
 .. image:: ../images/favicon_safari.png
+    :height: 300px
 
 During an investigation, the main question for us was to establish the timeframe of certain internet search queries. The queries were done using the Safari browser on an iPhone. Internet history is still a valuable source for identifying user activity. Unfortunately however, the internet history oftentimes gets deleted by a user, or is deleted automatically after a certain amount of time. In our investigation the history was not present anymore. Luckily, there are other Safari databases recording data a user cannot easily delete. Such a database is the ``Favicon.db`` database.
 
