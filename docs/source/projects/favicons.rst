@@ -1,44 +1,44 @@
 .. _favicons:
 
-Op Favicon Safari
+A Favicon Safari
 ==============================
 
-De onderzoeksvraag voor deze zaak was het vaststellen van het moment dat een bepaalde zoekopdracht is uitgevoerd met een Safari browser op een iPhone. Internetgeschiedenis blijft nog steeds een waardevolle bron van gebruikersactiviteiten. Helaas wordt de internetgeschiedenis vaak door een gebruiker, of na een lange tijd automatisch, verwijderd; zo ook in ons onderzoek. Gelukkig zijn er nog een aantal andere databases van deze browser waar een gebruiker zelf niet iets gemakkelijk uit kan verwijderen, zoals de ``Favicon.db`` database. 
+During an investigation, the main question for us was to establish the timeframe of certain internet search queries. The queries were done using the Safari browser on an iPhone. Internet history is still a valuable source for identifying user activity. Unfortunately however, the internet history oftentimes gets deleted by a user, or is deleted automatically after a certain amount of time. In our investigation the history was not present anymore. Luckily, there are other Safari databases recording data a user cannot easily delete. Such a database is the ``Favicon.db`` database.
 
-Favicons zijn die kleine icoontjes die je bijvoorbeeld boven in het tabblad van je browser ziet. Safari slaat favicons lokaal op zodat ze niet telkens opnieuw gedownload hoeven te worden en `Favicon.db` is verantwoordelijk voor het registreren van deze informatie.
+Favicons are the small icons you can see on the tab of the browser. Safari saves the favicons locally, so they don't have to be downloaded again and again. The database `Favicon.db` is responsible for registering this information.
 
 .. image:: ../images/favicon1.png
 
-Als we de database openen zien we de tabel `page_url`, gevuld met URL’s en UUID’s. Ook is de tabel `icon_info` aanwezig, ook gevuld met URL’s, UUID’s… en tijdstempels! De URL’s in deze twee tabellen komen alleen niet met elkaar overeen. De URL’s in de `icon_info` tabel verwijzen naar de download locaties van de favicon zelf. En de URL’s in `page_url` zijn de URL’s die bezocht zijn door de gebruiker. We kunnen deze URL’s en tijdstempels aan elkaar verbinden door middel van de UUID. 
+Inside the database we can see the table `page_url`, which contains URLs and UUIDs. Another table is called `icon_info`, containing both ULRs and UUIDs... and timestamps! However, the URLs in these two tables do not match. The URLs in table `icon_info` refer to the download locations of the favicons. The URLs in table `page_url` are visited by the user. We can find a link between these URLs by comparing their UUIDs.
 
-Echter is het niet zo dat elke regel in `page_url`, een tijdstempel van het bezoeken heeft in de `icon_info` tabel. 
+However, not all records in table `page_url` can be related to the time of visiting a URL.
 
-Onze zoekopdracht kwam wel voor in de `page_url` tabel maar het tijdstempel dat eraan gelinkt kon worden lag ver na het moment dat we verwachtten. Om een beter beeld te krijgen hoe deze informatie wordt opgeslagen, hebben we een aantal referentie-experimenten uitgevoerd. De resultaten van onze referentie-experimenten kunnen als volgt samengevat worden:
+Our search query was present in table `page_url`, but the timestamp that was linked to it wasn't the timestamp we expected. To create a better understanding on how this information is stored, we conducted a few experiments. The results of these experiments can be summarized as follows:
 
-1.  Wanneer een webpagina of specifieker een URL voor het eerst bezocht wordt:
+1.  When a website (or more specifically a URL) is visited for the first time:
 
-    * wordt in de tabel `icon_info` een regel toegevoegd met daarin een uniek ID voor de favicon, het webadres van de favicon zelf en een tijdstempel van de huidige datum en tijd;
-    * wordt een bestandsnaam berekend uit de md5 hash van het unieke ID en daarin wordt de favicon informatie gedownload in een directory naast de database;
-    * wordt in de tabel `page_url` een regel toegevoegd met daarin de URL en een verwijzing naar het unieke ID.
+    * A record is added to table `icon_info` containing a UUID for the favicon, the web address of the favicon and the current timestamp;
+    * The favicon is downloaded to disk, using the MD5-hash of the UUID as file name;
+    * A record is added to table `page_url` containing the URL and the UUID.
 
-2.  Wanneer een URL voor een tweede of volgende keer wordt bezocht:
+2.  When a URL is re-visited:
 
-    * wordt het tijdstempel in `icon_info` niet geüpdatet, tenzij de favicon op de URL is veranderd;
-    * Dan wordt het favicon opnieuw gedownload en het tijdstempel in de tabel `icon_info` geüpdatet;
-    * Er verandert niets in de tabel `page_url`.
+    * No changes are seen in table `page_url`;
+    * The timestamp in table `icon_info` is only updated when the favicon itself is updated;
+    * The favicon is downloaded to disk again if the favicon has changed.
+    
+3.  Records are appended to the tables; the last records in the table are added most recently.
 
-3.  De regels worden op volgorde toegevoegd aan de tabel; de onderste regel in de database is het meest recent toegevoegd.
+4.  Unique URLs are stored in table `page_url`
 
-4.  Unieke URL’s worden toegevoegd aan de `page_url` tabel.
+5.  Records in table `page_url` are linked to records in table `icon_info` by UUID.
 
-5.  Regels in `page_url` worden gelinkt met icon_info door middel van een uniek ID.
+6.  The order of URLs in table `page_info` remains unchanged when re-visiting a URL.
 
-6.	De volgordelijkheid van de URL's in `page_info` verandert niet op het moment dat een pagina voor de tweede keer wordt bezocht.
+7.  Per favicon one records is stored in table `icon_info`, containing the URL to the location of the favicon.
 
-7.	Per favicon wordt één regel opgeslagen in `icon_info` met de URL naar de locatie van de favicon.
+8.  In case a website uses multiple favicons for different web pages, unique records are stored in table `icon_info`.
 
-8.	Wanneer een website verschillende favicons gebruikt voor verschillende pagina’s, worden unieke regels voor deze favicons aangemaakt in de `icon_info` tabel.
+In our research, we have seen a number of URLs linked to the favicon of Google. Therefore it is highly unlikely that the timestamp as found in table `icon_info` corresponds to the moment of the search query.
 
-We zagen in ons onderzoek dat er veel URL’s aan de favicon van Google gelinkt kunnen worden. Het is daarom erg onwaarschijnlijk dat het tijdstempel in `icon_info` hoort bij het moment dat onze zoekopdracht is uitgevoerd. 
-
-Wat we wel kunnen doen is naar omliggende regels kijken. Wanneer er UUID’s zijn die maar één keer voorkomen in de tabel, weten we zeker dat het tijdstempel dat erbij geregistreerd is, ook het moment is dat deze pagina bezocht is. De tussenliggende regels moeten in de tussenliggende periode geschreven zijn. Door deze methode toe te passen in ons onderzoek was een periode op te stellen van minder dan 24 uur waar binnen de zoekopdracht uitgevoerd moet zijn.
+What we can do is analyzing the surrounding records in the table. When two UUIDs are found that occur only once, we can deduce the moment the corresponding websites are visited. Records in between these two records are bound to be written to the table between these two moments. By using this method, we were able to specify a period of time (of 24 hours) in which the search query must have been performed.
