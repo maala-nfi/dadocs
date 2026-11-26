@@ -4,6 +4,16 @@ Latest blogs by Team Data Analysis of the Netherlands Forensic Institute.
 **Team Data Analysis** is part of the Netherlands Forensic Institute, with a focus on digital traces on any type of digital device.
 Key words are *interpretation*, *likelihood ratio* and *fun*.
 
+.. card::
+   :class-card: modern-card
+   :link: projects/snapchat_photossqlite
+   :link-type: doc
+
+   Photos.sqlite is your friend in a Snapchat video origin investigation
+   ^^^
+    Photos.sqlite can help you tell the difference between a video created by the user, a video received by the user, and more.
+   +++
+   November 24, 2026
 
 .. card::
    :class-card: modern-card
